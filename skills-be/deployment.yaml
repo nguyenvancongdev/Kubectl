@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: qr-code
-  namespace: 
+  name: skills
+  namespace: ingress-nginx
   labels:
-    app: qr-code
+    app: skills
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: qr-code
+      app: skills
   template:
     metadata:
       labels:
-        app: qr-code
+        app: skills
     spec:
       containers:
-      - name: qr-code
-        image: nguyenvancongdev/qr-code
+      - name: skills
+        image: nguyenvancongdev/skills
         ports:
         - containerPort: 80
