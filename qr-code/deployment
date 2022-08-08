@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: qr-code
+  labels:
+    app: qr-code
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: qr-code
+  template:
+    metadata:
+      labels:
+        app: qr-code
+    spec:
+      containers:
+      - name: qr-code
+        image: nguyenvancongdev/qr-code
+        ports:
+        - containerPort: 80
