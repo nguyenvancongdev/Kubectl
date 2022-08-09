@@ -6,7 +6,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: "congthang.nuce"
+  - host: "congnguyen.dev"
     http:
       paths:
         - pathType: Prefix
